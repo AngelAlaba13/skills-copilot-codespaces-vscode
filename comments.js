@@ -1,0 +1,27 @@
+// Create web server
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const app = express();
+const port = 3000;
+const Comment = require('./models/comment');
+const User = require('./models/user');
+const Post = require('./models/post');
+const { authenticate } = require('./middleware/authenticate');
+const { validateComment } = require('./middleware/validateComment');
+const { validateUser } = require('./middleware/validateUser');
+const { validatePost } = require('./middleware/validatePost');
+const { validateCommentUpdate } = require('./middleware/validateCommentUpdate');
+const { validateCommentDelete } = require('./middleware/validateCommentDelete');
+const { validateUserUpdate } = require('./middleware/validateUserUpdate');
+const { validateUserDelete } = require('./middleware/validateUserDelete');
+const { validatePostUpdate } = require('./middleware/validatePostUpdate');
+const { validatePostDelete } = require('./middleware/validatePostDelete');
+const { validateLogin } = require('./middleware/validateLogin');
+const { validateRegister } = require('./middleware/validateRegister');
+const { validatePostCreate } = require('./middleware/validatePostCreate');
+const { validateCommentCreate } = require('./middleware/validateCommentCreate');
+const { validateUserCreate } = require('./middleware/validateUserCreate');
+const { validateUserLogin } = require('./middleware/validateUserLogin');
+const { validatePostLogin } = require('./middleware/validatePostLogin');
